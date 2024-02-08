@@ -1,2 +1,14 @@
-<h1>{{user.username}}</h1>
-<img src="{{ user.profile.image.url }}">
+{% extends "food/base.html" %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="text-center">
+                <h1>{{ user.username }}</h1>
+                <img src="{{ user.profile.image.url }}" class="img-fluid" alt="{{ user.username }}'s Profile Picture">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
